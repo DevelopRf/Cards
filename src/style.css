@@ -1,0 +1,230 @@
+* {
+  bottom: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 30;
+  font-weight: 500;
+  line-height: 68px;
+}
+@media (min-width: 480px) {
+  h2 {
+    font-size: 32px;
+  }
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 45px;
+  }
+}
+@media (min-width: 1200px) {
+  h2 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 1400px) {
+  h2 {
+    font-size: 58px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.favorite {
+  margin: 100px 0;
+}
+.favorite .container {
+  max-width: 1320px;
+  margin: auto;
+  padding: 0 12px;
+}
+@media (min-width: 576px) {
+  .favorite .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .favorite .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .favorite .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .favorite .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .favorite .container {
+    max-width: 1320px;
+  }
+}
+.favorite .container .heading {
+  margin: 0 0 60px;
+  max-width: 748px;
+}
+.favorite .container .heading span {
+  position: relative;
+}
+.favorite .container .heading span::before {
+  content: "";
+  position: absolute;
+  bottom: 22%;
+  display: inline-block;
+  width: 100%;
+  height: 50%;
+  z-index: -1;
+  background-color: #e5f346;
+}
+.favorite .container .cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  row-gap: 30px;
+}
+@media (min-width: 1200px) {
+  .favorite .container .cards {
+    flex-wrap: nowrap;
+  }
+}
+.favorite .container .cards .card {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .favorite .container .cards .card {
+    padding: 10px;
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .favorite .container .cards .card {
+    width: 33%;
+  }
+}
+.favorite .container .cards .card .image {
+  position: relative;
+  overflow: hidden;
+}
+.favorite .container .cards .card .image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.4s;
+}
+.favorite .container .cards .card:hover img {
+  transform: scale(1.2);
+}
+.favorite .container .cards .card:hover .overley {
+  opacity: 1;
+}
+.favorite .container .cards .card:hover .overley .icons {
+  bottom: 0;
+  opacity: 1;
+}
+.favorite .container .cards .card .overley {
+  position: relative;
+  position: absolute;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.4s;
+  inset: 0;
+  z-index: 999;
+  background: linear-gradient(180deg, rgba(75, 56, 50, 0) 0%, rgba(75, 54, 50, 0.95) 78.87%);
+}
+.favorite .container .cards .card .overley .icons {
+  display: flex;
+  gap: 3px;
+  position: absolute;
+  bottom: -10px;
+  opacity: 0;
+  transition: all 0.4s;
+}
+.favorite .container .cards .card .overley .icons li {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.favorite .container .cards .card .overley .icons li a {
+  display: block;
+  padding: 10px 5px;
+  text-align: center;
+  background-color: #F7F2EE;
+}
+.favorite .container .cards .card .overley .icons li a .icon {
+  width: 27px;
+  height: 27px;
+  margin: auto;
+}
+.favorite .container .cards .card .overley .icons li a .icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.favorite .container .cards .card .overley .icons li a:hover {
+  background-color: #fff;
+}
+@media (min-width: 576px) {
+  .favorite .container .cards .card .overley .icons li a {
+    padding: 18px 10px;
+  }
+}
+@media (min-width: 992px) {
+  .favorite .container .cards .card .overley .icons li a {
+    padding: 20px 17px;
+  }
+}
+@media (min-width: 1400px) {
+  .favorite .container .cards .card .overley .icons li a {
+    padding: 30px 20px;
+  }
+}
+.favorite .container .cards .card .overley .icons li p {
+  font-family: "Manrope";
+  font-size: 11px;
+  color: #524946;
+  margin: 15px 0 0;
+}
+.favorite .container .cards .card .info {
+  margin: 30px 0 0;
+  padding: 0 15px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.favorite .container .cards .card .info a {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 33px;
+  color: #4b3832;
+}
+.favorite .container .cards .card .info p {
+  font-family: "Sora", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #9a9695;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,40 @@
+* {
+    bottom: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Epilogue', sans-serif;
+    @include Font ($f-s:1rem, $f-w:400, $l-h:1.5);
+}
+
+h2 {
+    @include Font($f-s: 30, $f-w: 500, $l-h: 68px);
+
+    @media (min-width: 480px) {
+        font-size: 32px;
+    }
+
+    @media (min-width: 768px) {
+        font-size: 45px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 50px;
+    }
+
+    @media (min-width: 1400px) {
+        font-size: 58px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+ul
+{
+    list-style: none;
+    padding: 0;
+}
